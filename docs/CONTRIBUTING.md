@@ -32,7 +32,7 @@ If you are adding new functionality or fixing a bug, please add a test for it.
 yarn test:ci
 ```
 
-#### How to add a new module
+### How to add a new module
 
 To create a new module:
 

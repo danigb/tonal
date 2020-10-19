@@ -17,6 +17,8 @@
   "dependencies": {
     "@tonaljs/chord-type": "^3.6.0",
     "@tonaljs/core": "^3.5.4",
+    "@tonaljs/interval": "^3.5.4",
+    "@tonaljs/note": "^3.5.4",
     "@tonaljs/pcset": "^3.5.4"
   },
   "author": "danigb@gmail.com",
