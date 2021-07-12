@@ -15,7 +15,7 @@ import {
 } from "@tonaljs/core";
 
 import { isSubsetOf, isSupersetOf } from "@tonaljs/pcset";
-
+import { semitones, simplify } from "@tonaljs/interval";
 import { all as scaleTypes } from "@tonaljs/scale-type";
 export { detect } from "@tonaljs/chord-detect";
 
@@ -128,8 +128,8 @@ export function getChord(
     return NoChord;
   }
 
-  const rootInterval = distance(tonic.pc, root.pc);
-  const rootDegree = type.intervals.indexOf(rootInterval) + 1;
+  const rootInterval = semitones(distance(tonic.pc, root.pc));
+  const rootDegree = type.intervals.map(i => semitones(simplify(i))).indexOf(rootInterval) + 1;
   if (!root.empty && !rootDegree) {
     return NoChord;
   }
